@@ -8,5 +8,5 @@ DEST_ROOT=${DEST_ROOT:-"/deploy"}
 DEST_FOLDER="$DEST_ROOT/${DEST_FOLDER:-'src'}"
 
 mkdir -p "$DEST_FOLDER"
-mc config host add minio $MINIO_HOST $ACCESS_KEY $SECRET_KEY S3v4
+mc config host add minio "$MINIO_HOST" "$ACCESS_KEY" "$SECRET_KEY" S3v4
 mc cp --recursive "minio/$SOURCE_BUCKET" "$DEST_FOLDER"
