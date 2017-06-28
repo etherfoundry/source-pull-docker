@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ALLOW_PLAY=0
+ALLOW_PLAY=${ALLOW_PLAY:-0}
 
 sleep 5
 
