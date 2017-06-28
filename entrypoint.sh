@@ -2,6 +2,8 @@
 
 ALLOW_PLAY=0
 
+sleep 5
+
 MINIO_HOST=${MINIO_HOST:-"https://play.minio.io:9000/"}
 
 SECRET_PATH=/run/secrets
