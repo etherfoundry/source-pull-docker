@@ -2,7 +2,7 @@ FROM minio/mc
 MAINTAINER garrett@garrettboast.com
 
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod a+x,ugo=r /entrypoint.sh
+RUN chmod a=rx /entrypoint.sh
 
 
 ENTRYPOINT ["entrypoint.sh"]
