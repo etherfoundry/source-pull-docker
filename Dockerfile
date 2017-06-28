@@ -8,4 +8,4 @@ RUN ln -s /bin/entrypoint.sh /entrypoint.sh \
 
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD ["bash"]
+CMD [""]

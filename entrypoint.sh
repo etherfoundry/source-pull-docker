@@ -9,12 +9,12 @@ ACCESS_KEY_PATH="$SECRET_PATH/access_key"
 SECRET_KEY_PATH="$SECRET_PATH/secret_key"
 if [ -e "$ACCESS_KEY_PATH" ] ; then
 	ACCESS_KEY=`cat $ACCESS_KEY_PATH`
-else if [ -z "$ACCESS_KEY" -a "$ALLOW_PLAY" != "0" ] ; then echo "access_key docker secret does not exist" ; exit 1 ; fi
+else if [ -z "$ACCESS_KEY" -a "$ALLOW_PLAY" = "0" ] ; then echo "access_key docker secret does not exist" ; exit 1 ; fi
 fi
 
 if [ -e "$SECRET_KEY_PATH" ] ; then
 	SECRET_KEY=`cat $SECRET_KEY_PATH`
-else if [ -z "$SECRET_KEY" -a "$ALLOW_PLAY" != "0" ] ; then echo "secret_key docker secret does not exist" ; exit 1 ; fi
+else if [ -z "$SECRET_KEY" -a "$ALLOW_PLAY" = "0" ] ; then echo "secret_key docker secret does not exist" ; exit 1 ; fi
 fi
 
 if [ "$ALLOW_PLAY" != "0" ] ; then ACCESS_KEY=${ACCESS_KEY:-"Q3AM3UQ867SPQQA43P2F"} ; fi
